@@ -739,14 +739,14 @@
         }
         
         .video-container.portrait {
-    aspect-ratio: 9/16; /* Portrait ratio */
-    height: 300px; /* Taller for portrait */
-}
+            aspect-ratio: 9/16; /* Portrait ratio */
+            height: 300px; /* Taller for portrait */
+        }
 
-.video-container.landscape {
-    aspect-ratio: 16/9; /* Landscape ratio */
-    height: 200px;
-}
+        .video-container.landscape {
+            aspect-ratio: 16/9; /* Landscape ratio */
+            height: 200px;
+        }
 
         .video-container:hover {
             transform: translateY(-8px) scale(1.02);
@@ -1044,6 +1044,22 @@
                 max-width: 50vw; /* Narrower on landscape screens */
                 max-height: 85vh;
             }
+        }
+
+        /* Debug alert styles */
+        .debug-alert {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            background: rgba(255, 0, 0, 0.9);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            z-index: 4000;
+            font-family: monospace;
+            font-size: 12px;
+            max-width: 300px;
+            word-wrap: break-word;
         }
 
         /* Responsive Design */
@@ -1422,21 +1438,21 @@
             <div class="video-section">
                 <h3>🎥 Videos</h3>
                 <div class="videos-grid">
-                    <div class="video-container" onclick="playVideo('excappStory.MP4', 'Story')">
+                    <div class="video-container" onclick="playVideo('assetsGame/excappStory.mp4', 'Story')">
                         <video class="video-thumbnail" preload="metadata">
-                            <source src="assetsGame/excappStory.MP4" type="video/mp4">
+                            <source src="assetsGame/excappStory.mp4" type="video/mp4">
                         </video>
                         <div class="play-button">▶️</div>
                         <div class="video-title">Story</div>
                     </div>
-                    <div class="video-container" onclick="playVideo('excappAR.MP4', 'AR')">
+                    <div class="video-container" onclick="playVideo('assetsGame/excappAR.mp4', 'AR')">
                         <video class="video-thumbnail" preload="metadata">
-                            <source src="assetsGame/excappAR.MP4" type="video/mp4">
+                            <source src="assetsGame/excappAR.mp4" type="video/mp4">
                         </video>
                         <div class="play-button">▶️</div>
                         <div class="video-title">AR</div>
                     </div>
-                    <div class="video-container" onclick="playVideo('excapp3.mp4', 'Ending')">
+                    <div class="video-container" onclick="playVideo('assetsGame/excapp3.mp4', 'Ending')">
                         <video class="video-thumbnail" preload="metadata">
                             <source src="assetsGame/excapp3.mp4" type="video/mp4">
                         </video>
@@ -1493,28 +1509,28 @@
             <div class="video-section">
                 <h3>🎥 Videos</h3>
                 <div class="videos-grid">
-                    <div class="video-container" onclick="playVideo('escapp1.MP4', 'Face id')">
+                    <div class="video-container" onclick="playVideo('assetsGame/escapp1.mp4', 'Face id')">
                         <video class="video-thumbnail" preload="metadata">
-                            <source src="assetsGame/escapp1.MP4" type="video/mp4">
+                            <source src="assetsGame/escapp1.mp4" type="video/mp4">
                         </video>
                         <div class="play-button">▶️</div>
                         <div class="video-title">Face id</div>
                     </div>
-                    <div class="video-container" onclick="playVideo('escapp4.MP4', 'Chat with uknown')">
+                    <div class="video-container" onclick="playVideo('assetsGame/escapp4.mp4', 'Chat with unknown')">
                         <video class="video-thumbnail" preload="metadata">
-                            <source src="assetsGame/escapp4.MP4" type="video/mp4">
+                            <source src="assetsGame/escapp4.mp4" type="video/mp4">
                         </video>
                         <div class="play-button">▶️</div>
-                        <div class="video-title">Chat with uknown</div>
+                        <div class="video-title">Chat with unknown</div>
                     </div>
-                    <div class="video-container" onclick="playVideo('escapp2.MP4', 'Horor animation')">
+                    <div class="video-container" onclick="playVideo('assetsGame/escapp2.mp4', 'Horror animation')">
                         <video class="video-thumbnail" preload="metadata">
-                            <source src="assetsGame/escapp2.MP4" type="video/mp4">
+                            <source src="assetsGame/escapp2.mp4" type="video/mp4">
                         </video>
                         <div class="play-button">▶️</div>
-                        <div class="video-title">Horor animation</div>
+                        <div class="video-title">Horror animation</div>
                     </div>
-                    <div class="video-container" onclick="playVideo('escapp3.mp4', 'Puzzle Mechanics')">
+                    <div class="video-container" onclick="playVideo('assetsGame/escapp3.mp4', 'Puzzle Mechanics')">
                         <video class="video-thumbnail" preload="metadata">
                             <source src="assetsGame/escapp3.mp4" type="video/mp4">
                         </video>
@@ -1570,21 +1586,21 @@
             <div class="video-section">
                 <h3>🎥 Videos</h3>
                 <div class="videos-grid">
-                    <div class="video-container" onclick="playVideo('gameplayASD1.mp4')">
+                    <div class="video-container" onclick="playVideo('assetsGame/gameplayASD1.mp4', 'Gameplay Overview')">
                         <video class="video-thumbnail" preload="metadata">
                             <source src="assetsGame/gameplayASD1.mp4" type="video/mp4">
                         </video>
                         <div class="play-button">▶️</div>
                         <div class="video-title">Gameplay Overview</div>
                     </div>
-                    <div class="video-container" onclick="playVideo('gameplayASD2.mp4')">
+                    <div class="video-container" onclick="playVideo('assetsGame/gameplayASD2.mp4', 'Learning Features')">
                         <video class="video-thumbnail" preload="metadata">
                             <source src="assetsGame/gameplayASD2.mp4" type="video/mp4">
                         </video>
                         <div class="play-button">▶️</div>
                         <div class="video-title">Learning Features</div>
                     </div>
-                    <div class="video-container" onclick="playVideo('gameplayasd3.mp4')">
+                    <div class="video-container" onclick="playVideo('assetsGame/gameplayasd3.mp4', 'Interactive Games')">
                         <video class="video-thumbnail" preload="metadata">
                             <source src="assetsGame/gameplayasd3.mp4" type="video/mp4">
                         </video>
@@ -1637,21 +1653,21 @@
             <div class="video-section">
                 <h3>🎥 Videos</h3>
                 <div class="videos-grid">
-                    <div class="video-container" onclick="playVideo('gameplayMolecule.mp4')">
+                    <div class="video-container" onclick="playVideo('assetsGame/gameplayMolecule.mp4', 'Gameplay')">
                         <video class="video-thumbnail" preload="metadata">
                             <source src="assetsGame/gameplayMolecule.mp4" type="video/mp4">
                         </video>
                         <div class="play-button">▶️</div>
                         <div class="video-title">Gameplay</div>
                     </div>
-                    <div class="video-container" onclick="playVideo('gameplayMolecule2.mp4', 'Gameplay')">
+                    <div class="video-container" onclick="playVideo('assetsGame/gameplayMolecule2.mp4', 'Gameplay 2')">
                         <video class="video-thumbnail" preload="metadata">
                             <source src="assetsGame/gameplayMolecule2.mp4" type="video/mp4">
                         </video>
                         <div class="play-button">▶️</div>
-                        <div class="video-title">Gameplay</div>
+                        <div class="video-title">Gameplay 2</div>
                     </div>
-                    <div class="video-container" onclick="playVideo('moleculeIntroduction.mp4', 'Trailer')">
+                    <div class="video-container" onclick="playVideo('assetsGame/moleculeIntroduction.mp4', 'Trailer')">
                         <video class="video-thumbnail" preload="metadata">
                             <source src="assetsGame/moleculeIntroduction.mp4" type="video/mp4">
                         </video>
@@ -1698,6 +1714,7 @@
     </footer>
 
     <script>
+
         // Optimized particle creation - reduced count and simplified animation
         function createParticles() {
             const particlesContainer = document.getElementById('particles');
@@ -1868,10 +1885,10 @@
 
         // Initialize media galleries when modal opens
         function initializeMediaGalleries(modalId) {
-    detectMediaOrientation();
-    detectVideoOrientation(); // Add this line
-    generateVideoThumbnails();
-}
+            detectMediaOrientation();
+            detectVideoOrientation();
+            generateVideoThumbnails();
+        }
 
         // Generate video thumbnails
         function generateVideoThumbnails() {
@@ -1900,80 +1917,59 @@
             document.body.style.overflow = 'auto';
         }
 
-        // Simplified video playback functionality
+        // Fixed video playback function - Simple and reliable
         function playVideo(videoSrc, videoTitle = '') {
-    const videoModal = document.getElementById('video-modal');
-    const videoPlayer = document.getElementById('video-player');
-    const videoSource = document.getElementById('video-source');
-    const videoSourceMov = document.getElementById('video-source-mov');
-    const videoTitleDisplay = document.getElementById('video-title-display');
-    
-    // Create temporary video to detect dimensions
-    const tempVideo = document.createElement('video');
-
-    tempVideo.addEventListener('loadedmetadata', function() {
-        const isPortrait = this.videoHeight > this.videoWidth;
-        const aspectRatio = this.videoWidth / this.videoHeight;
-        
-        // Apply appropriate styling based on orientation
-        if (isPortrait) {
-            videoPlayer.style.maxWidth = '60vw';
-            videoPlayer.style.maxHeight = '90vh';
-            videoPlayer.style.aspectRatio = aspectRatio;
-        } else {
-            videoPlayer.style.maxWidth = '90vw';
-            videoPlayer.style.maxHeight = '70vh';
-            videoPlayer.style.aspectRatio = aspectRatio;
-        }
-    });
+           
             
-             const fileExtension = videoSrc.split('.').pop().toLowerCase();
-    
-    if (fileExtension === 'mov') {
-        videoSource.src = '';
-        videoSourceMov.src = videoSrc;
-        tempVideo.src = videoSrc;
-    } else {
-        videoSource.src = videoSrc;
-        videoSourceMov.src = '';
-        tempVideo.src = videoSrc;
-    }
-    
-    if (videoTitle) {
-        videoTitleDisplay.textContent = videoTitle;
-        videoTitleDisplay.style.display = 'block';
-    } else {
-        videoTitleDisplay.style.display = 'none';
-    }
-    
-    videoPlayer.load();
-    videoModal.style.display = 'block';
-    document.body.style.overflow = 'hidden';
-    
-    videoPlayer.addEventListener('loadeddata', function() {
-        videoPlayer.play().catch(e => {
-            console.log('Auto-play prevented by browser policy');
-        });
-    }, { once: true });
-}
+            const videoModal = document.getElementById('video-modal');
+            const videoModalContent = videoModal.querySelector('.video-modal-content');
+            
+            // Create new video element (works reliably with local files)
+            const videoHTML = `
+                <video controls autoplay style="max-width: 90vw; max-height: 70vh; border-radius: 15px; box-shadow: 0 15px 60px rgba(255, 255, 255, 0.1);" preload="metadata">
+                    <source src="${videoSrc}" type="video/mp4">
+                    <source src="${videoSrc}" type="video/quicktime">
+                    Your browser does not support the video tag.
+                </video>
+                ${videoTitle ? `<div style="position: absolute; bottom: 20px; left: 20px; background: rgba(0,0,0,0.7); color: white; padding: 10px 20px; border-radius: 25px; font-size: 1.1rem; font-weight: 500; backdrop-filter: blur(10px);">${videoTitle}</div>` : ''}
+            `;
+            
+            videoModalContent.innerHTML = videoHTML;
+            videoModal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+            
+           
+        }
+
+        // Helper function to check if video file exists
+        async function checkVideoExists(videoSrc) {
+            try {
+                const response = await fetch(videoSrc, { method: 'HEAD' });
+                return response.ok;
+            } catch (error) {
+                return false;
+            }
+        }
 
         function closeVideoModal() {
             const videoModal = document.getElementById('video-modal');
-            const videoPlayer = document.getElementById('video-player');
+            const videoModalContent = videoModal.querySelector('.video-modal-content');
             
-            // Stop video and hide modal
-            videoPlayer.pause();
-            videoPlayer.currentTime = 0;
+            
+            // Stop any playing videos and clear content
+            const videos = videoModalContent.querySelectorAll('video');
+            videos.forEach(video => {
+                video.pause();
+                video.currentTime = 0;
+            });
+            
+            // Clear content and hide modal
+            videoModalContent.innerHTML = '';
             videoModal.style.display = 'none';
             document.body.style.overflow = 'auto';
+            
+            
         }
-
-        // Close lightbox when clicking on background
-        document.getElementById('lightbox').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeLightbox();
-            }
-        });
 
         // Close video modal when clicking on background
         document.getElementById('video-modal').addEventListener('click', function(e) {
@@ -1982,7 +1978,7 @@
             }
         });
 
-        // Close media modal when clicking on background
+        // Close media modal when clicking on background  
         document.getElementById('media-modal').addEventListener('click', function(e) {
             if (e.target === this) {
                 closeMediaModal();
@@ -2077,14 +2073,7 @@
             });
         }
 
-        // Initialize when page loads
-        window.addEventListener('load', () => {
-            createParticles();
-            initializeVideoThumbnails();
-            detectMediaOrientation();
-            detectVideoOrientation(); // Add this line
-        });
-
+    
         // Simplified smooth scrolling behavior
         document.addEventListener('DOMContentLoaded', () => {
             document.querySelectorAll('.modal-content').forEach(content => {
@@ -2093,23 +2082,23 @@
         });
 
         function detectVideoOrientation() {
-    document.querySelectorAll('.video-container').forEach(container => {
-        const video = container.querySelector('.video-thumbnail');
-        
-        if (video) {
-            video.addEventListener('loadedmetadata', function() {
-                const isPortrait = this.videoHeight > this.videoWidth;
-                container.classList.add(isPortrait ? 'portrait' : 'landscape');
+            document.querySelectorAll('.video-container').forEach(container => {
+                const video = container.querySelector('.video-thumbnail');
+                
+                if (video) {
+                    video.addEventListener('loadedmetadata', function() {
+                        const isPortrait = this.videoHeight > this.videoWidth;
+                        container.classList.add(isPortrait ? 'portrait' : 'landscape');
+                    });
+                    
+                    // Trigger load if already loaded
+                    if (video.readyState >= 1) {
+                        const isPortrait = video.videoHeight > video.videoWidth;
+                        container.classList.add(isPortrait ? 'portrait' : 'landscape');
+                    }
+                }
             });
-            
-            // Trigger load if already loaded
-            if (video.readyState >= 1) {
-                const isPortrait = video.videoHeight > video.videoWidth;
-                container.classList.add(isPortrait ? 'portrait' : 'landscape');
-            }
         }
-    });
-}
     </script>
 </body>
 </html>
