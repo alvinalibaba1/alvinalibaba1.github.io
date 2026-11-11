@@ -58,7 +58,7 @@
             <h2 class="section-title fade-in">About Me</h2>
             <div class="about-content">
                 <div class="about-text fade-in">
-                    <p>An iOS Developer with 1 year of experience creating intuitive and high-performance mobile apps. Proficient in Swift, focusing on UI/UX optimization, app performance, and third-party API integration. Currently interning at the Apple Developer Academy, where I’m deepening my knowledge and passion for iOS development. Experienced in developing and deploying apps that meet Apple’s guidelines. Eager to contribute my skills to a dynamic team and continue building impactful iOS applications.</p>
+                    <p>An iOS Developer creating intuitive and high-performance mobile apps. Proficient in Swift, focusing on UI/UX optimization, app performance, and third-party API integration. Completed iOS and Games Development programs at the Apple Developer Academy and an iOS Engineer internship at Alfagift. Experienced in developing and deploying apps that meet Apple’s guidelines. Eager to contribute my skills to a dynamic team and continue building impactful iOS applications.</p>
                 </div>
                 <div class="stats-grid fade-in">
                     <div class="stat-card">
@@ -66,7 +66,7 @@
                         <div class="stat-label">Years Experience</div>
                     </div>
                     <div class="stat-card">
-                        <div class="stat-number">8+</div>
+                        <div class="stat-number">9+</div>
                         <div class="stat-label">Projects Completed</div>
                     </div>
                 </div>
@@ -79,6 +79,46 @@
         <div class="container">
             <h2 class="section-title fade-in">Recent Projects</h2>
             <div class="projects-grid">
+
+                <div class="project-card fade-in" onclick="openModal('splitin-modal')">
+                    <div class="project-image">
+                        <img src="assetsApps/Splitin/Banner.png" alt="Splitin Banner" class="project-banner">
+                        <div class="project-overlay">
+                            <span class="view-details">View Details</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Splitin</h3>
+                        <p class="project-description">An iPhone bill-splitting app that scans receipts, assigns items to friends, calculates fair shares, and keeps track of who has paid.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag"><span>SwiftUI</span></span>
+                            <span class="tech-tag"><span>Vision</span></span>
+                            <span class="tech-tag"><span>Foundation Models</span></span>
+                            <span class="tech-tag"><span>StoreKit 2</span></span>
+                            <span class="tech-tag"><span>Cloudflare Workers</span></span>
+                            <span class="tech-tag"><span>OpenAI</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in" onclick="openModal('soundboardpop-modal')">
+                    <div class="project-image">
+                        <img src="assetsApps/SoundboardPop/Banner.png" alt="Soundboard Pop Banner" class="project-banner">
+                        <div class="project-overlay">
+                            <span class="view-details">View Details</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Soundboard Pop</h3>
+                        <p class="project-description">A macOS soundboard that plays any sound with one key, even while you game, stream or record. Global hotkeys, waveform trimming, mic mixing and ready-made sound packs.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag"><span>SwiftUI</span></span>
+                            <span class="tech-tag"><span>AVAudioEngine</span></span>
+                            <span class="tech-tag"><span>Carbon Hotkeys</span></span>
+                            <span class="tech-tag"><span>StoreKit 2</span></span>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="project-card fade-in" onclick="openModal('helperbuddy-modal')">
                     <div class="project-image">
@@ -151,7 +191,7 @@
                     </div>
                 </div>
             
-                <div class="project-card fade-in" onclick="openModal('ASDEduplay-modal')">
+                <div class="project-card fade-in hidden-project" onclick="openModal('ASDEduplay-modal')">
                     <div class="project-image">
                         <img src="assetsGame/bannerASDEduplay.png" alt="ASDEduplay Banner" class="project-banner">
                         <div class="project-overlay">
@@ -256,6 +296,15 @@
             <h2 class="section-title fade-in">My Apps in App Store</h2>
             <div class="appstore-marquee">
                 <div class="appstore-grid logo-only appstore-track">
+                    <div class="store-card logo-only fade-in" data-modal="splitin-modal" aria-label="Splitin — App Store release coming soon" tabindex="0">
+                        <div class="store-image-wrap logo-only">
+                            <img src="assetsApps/Splitin/AppIcon.png" alt="Splitin app logo" class="store-logo">
+                        </div>
+                        <div class="store-label">
+                            <div class="store-name">Splitin — Coming Soon</div>
+                        </div>
+                    </div>
+
                     <div class="store-card logo-only fade-in" data-modal="helperbuddy-modal" data-app-link="https://apps.apple.com/us/app/helper-buddy/id6753642471" aria-label="Helper Buddy" tabindex="0">
                         <div class="store-image-wrap logo-only">
                             <img src="assetsApps/HelperBuddy/Logo.png" alt="Helper Buddy app logo" class="store-logo">
@@ -423,7 +472,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 Alvin Reyvaldo. All rights reserved.</p>
+            <p>&copy; 2026 Alvin Reyvaldo. All rights reserved.</p>
         </div>
     </footer>
     
@@ -431,6 +480,166 @@
     <a href="#hero" class="fab">↑</a>
 
     <!-- Project Modals -->
+    <div id="splitin-modal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('splitin-modal')">&times;</button>
+            <h2>Splitin — Smart Receipt &amp; Bill Splitter</h2>
+
+            <div class="modal-banner">
+                <img src="assetsApps/Splitin/Banner.png" alt="Splitin Banner" class="modal-banner-img">
+            </div>
+
+            <p>Splitin turns a receipt into an editable split in seconds. Its privacy-first hybrid scanner uses on-device Vision and Apple Foundation Models when available, with an OpenAI-powered Cloudflare fallback for harder receipts. Users can split evenly or by item, handle tax, service charges and discounts, share polished summaries, and follow unpaid balances with history, statistics and reminders.</p>
+
+            <h3>Key Features:</h3>
+            <ul>
+                <li>AI-assisted receipt parsing with printed-total reconciliation and editable results</li>
+                <li>Equal or per-item splitting with quantities, tax, service charges, and discounts</li>
+                <li>Paid-status tracking, local reminders, bill history, search, and collection statistics</li>
+                <li>Shareable text, image, and branded PDF summaries with payment details</li>
+                <li>English and Indonesian localization, dark mode, and accessibility-aware UI</li>
+            </ul>
+
+            <h3>Technology Stack:</h3>
+            <div class="tech-tags">
+                <span class="tech-tag"><span>SwiftUI</span></span>
+                <span class="tech-tag"><span>Combine</span></span>
+                <span class="tech-tag"><span>Vision</span></span>
+                <span class="tech-tag"><span>VisionKit</span></span>
+                <span class="tech-tag"><span>Foundation Models</span></span>
+                <span class="tech-tag"><span>StoreKit 2</span></span>
+                <span class="tech-tag"><span>UserNotifications</span></span>
+                <span class="tech-tag"><span>Cloudflare Workers</span></span>
+                <span class="tech-tag"><span>D1</span></span>
+                <span class="tech-tag"><span>OpenAI</span></span>
+            </div>
+
+            <h3>Support &amp; Legal:</h3>
+            <div class="app-links">
+                <a href="splitin/support.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">Support</a>
+                <a href="splitin/privacy.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">Privacy Policy</a>
+            </div>
+
+            <h3 data-type="photos">App Preview</h3>
+            <div class="media-gallery">
+                <div class="media-container" id="splitin-photos" data-count="8">
+                    <button class="media-nav prev" onclick="navigateMedia('splitin-photos', -1)">‹</button>
+                    <div class="media-slider">
+                        <div class="media-item" data-type="photo" onclick="openMediaModal(this)">
+                            <img src="assetsApps/Splitin/Screenshots/01-Home.png" alt="Splitin Home dashboard">
+                        </div>
+                        <div class="media-item" data-type="photo" onclick="openMediaModal(this)">
+                            <img src="assetsApps/Splitin/Screenshots/02-History.png" alt="Splitin bill history">
+                        </div>
+                        <div class="media-item" data-type="photo" onclick="openMediaModal(this)">
+                            <img src="assetsApps/Splitin/Screenshots/03-Statistics.png" alt="Splitin splitting statistics">
+                        </div>
+                        <div class="media-item" data-type="photo" onclick="openMediaModal(this)">
+                            <img src="assetsApps/Splitin/Screenshots/05-Bill-Detail.png" alt="Splitin bill detail and payment tracking">
+                        </div>
+                        <div class="media-item" data-type="photo" onclick="openMediaModal(this)">
+                            <img src="assetsApps/Splitin/Screenshots/06-Send-Format.png" alt="Splitin sharing format options">
+                        </div>
+                        <div class="media-item" data-type="photo" onclick="openMediaModal(this)">
+                            <img src="assetsApps/Splitin/Screenshots/07-Send-Style.png" alt="Splitin sharing style options">
+                        </div>
+                        <div class="media-item" data-type="photo" onclick="openMediaModal(this)">
+                            <img src="assetsApps/Splitin/Screenshots/04-Profile.png" alt="Splitin profile and preferences">
+                        </div>
+                        <div class="media-item" data-type="photo" onclick="openMediaModal(this)">
+                            <img src="assetsApps/Splitin/Screenshots/08-Splitin-Plus.png" alt="Splitin Plus subscription options">
+                        </div>
+                    </div>
+                    <button class="media-nav next" onclick="navigateMedia('splitin-photos', 1)">›</button>
+                </div>
+                <div class="media-indicators" id="splitin-photos-indicators"></div>
+            </div>
+
+            <h3 data-type="videos">Promo Video</h3>
+            <div class="media-gallery">
+                <div class="media-container" id="splitin-videos" data-count="1">
+                    <div class="media-slider">
+                        <div class="media-item portrait" data-type="video" onclick="openMediaModal(this)">
+                            <video preload="metadata" muted playsinline>
+                                <source src="assetsApps/Splitin/Splitin-Promo-EN.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-overlay">▶</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="soundboardpop-modal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('soundboardpop-modal')">&times;</button>
+            <h2>Soundboard Pop — Play Sounds with One Key</h2>
+
+            <div class="modal-banner">
+                <img src="assetsApps/SoundboardPop/Banner.png" alt="Soundboard Pop Banner" class="modal-banner-img">
+            </div>
+
+            <p>Soundboard Pop turns your Mac into a sound pad. Tap a tile, or press its key from any app, and the sound plays instantly, even while OBS, Discord or a game is in front. Built with Swift and SwiftUI, with a free tier and a Pro upgrade for creators.</p>
+
+            <h3>Key Features:</h3>
+            <ul>
+                <li>System-wide hotkeys: give every tile its own key or combo, with duplicate-key protection</li>
+                <li>Low-latency, overlapping playback with loop, hold-to-play, fade out and a Stop All key</li>
+                <li>Waveform trimming, volume, emoji and color per tile; drag-and-drop import of mp3, wav, m4a and aiff</li>
+                <li>Multiple boards with search, tags, reordering, undo delete, automatic backups and shareable board files</li>
+                <li>Pro: mic mixing, per-tile output routing, sound chains, stop groups, pitch and speed</li>
+                <li>24 built-in royalty-free sounds, a guided tour and an Easy Mode with bigger tiles</li>
+            </ul>
+
+            <h3>Technology Stack:</h3>
+            <div class="tech-tags">
+                <span class="tech-tag"><span>SwiftUI</span></span>
+                <span class="tech-tag"><span>AVAudioEngine</span></span>
+                <span class="tech-tag"><span>AVFoundation</span></span>
+                <span class="tech-tag"><span>Carbon Hotkeys</span></span>
+                <span class="tech-tag"><span>StoreKit 2</span></span>
+                <span class="tech-tag"><span>App Sandbox</span></span>
+                <span class="tech-tag"><span>Swift Package Manager</span></span>
+            </div>
+
+            <h3>Support &amp; Legal:</h3>
+            <div class="app-links">
+                <a href="soundboard-pop/support.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">Support</a>
+                <a href="soundboard-pop/privacy.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">Privacy Policy</a>
+            </div>
+
+            <h3 data-type="photos">App Preview</h3>
+            <div class="media-gallery">
+                <div class="media-container" id="soundboardpop-photos" data-count="6">
+                    <button class="media-nav prev" onclick="navigateMedia('soundboardpop-photos', -1)">‹</button>
+                    <div class="media-slider">
+                        <div class="media-item" data-type="photo" onclick="openMediaModal(this)">
+                            <img src="assetsApps/SoundboardPop/Screenshots/01.jpg" alt="Play any sound with one key">
+                        </div>
+                        <div class="media-item" data-type="photo" onclick="openMediaModal(this)">
+                            <img src="assetsApps/SoundboardPop/Screenshots/02.jpg" alt="Give every tile its own key">
+                        </div>
+                        <div class="media-item" data-type="photo" onclick="openMediaModal(this)">
+                            <img src="assetsApps/SoundboardPop/Screenshots/03.jpg" alt="Trim every sound with a waveform">
+                        </div>
+                        <div class="media-item" data-type="photo" onclick="openMediaModal(this)">
+                            <img src="assetsApps/SoundboardPop/Screenshots/04.jpg" alt="Start with ready-made sounds">
+                        </div>
+                        <div class="media-item" data-type="photo" onclick="openMediaModal(this)">
+                            <img src="assetsApps/SoundboardPop/Screenshots/05.jpg" alt="Unlock Pro">
+                        </div>
+                        <div class="media-item" data-type="photo" onclick="openMediaModal(this)">
+                            <img src="assetsApps/SoundboardPop/Screenshots/06.jpg" alt="Safe and simple">
+                        </div>
+                    </div>
+                    <button class="media-nav next" onclick="navigateMedia('soundboardpop-photos', 1)">›</button>
+                </div>
+                <div class="media-indicators" id="soundboardpop-photos-indicators"></div>
+            </div>
+        </div>
+    </div>
+
     <div id="helperbuddy-modal" class="modal">
         <div class="modal-content">
             <button class="close-btn" onclick="closeModal('helperbuddy-modal')">&times;</button>
@@ -645,7 +854,7 @@
 
         <h3 data-type="videos">Videos</h3>
         <div class="media-gallery">
-            <div class="media-container" id="escapp-videos" data-count="2">
+            <div class="media-container" id="escapp-videos" data-count="4">
                 <button class="media-nav prev" onclick="navigateMedia('escapp-videos', -1)">‹</button>
                 <div class="media-slider">
                     <div class="media-item" data-type="video" onclick="openMediaModal(this)">
@@ -665,7 +874,9 @@
                             <source src="assetsApps/Escapp/escapp2.mp4" type="video/mp4">
                         </video>
                         <div class="video-overlay">▶</div>
-                         <video preload="metadata" muted>
+                    </div>
+                    <div class="media-item" data-type="video" onclick="openMediaModal(this)">
+                        <video preload="metadata" muted>
                             <source src="assetsApps/Escapp/escapp3.mp4" type="video/mp4">
                         </video>
                         <div class="video-overlay">▶</div>
@@ -716,7 +927,7 @@
                         <img src="assetsApps/NomNom/ss3nomnom.png" alt="NomNom Screenshot 2">
                     </div>
                     <div class="media-item" data-type="photo" onclick="openMediaModal(this)">
-                        <img src="assetsApps/NomNom/ssnomnom.png" alt="NomNom Screenshot 3">
+                        <img src="assetsApps/NomNom/ssNomnom.png" alt="NomNom Screenshot 3">
                     </div>
                     <div class="media-item" data-type="photo" onclick="openMediaModal(this)">
                         <img src="assetsApps/NomNom/ss2nomnom.png" alt="NomNom Screenshot 4">

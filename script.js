@@ -116,9 +116,9 @@
                 updateSliderPosition(container);
             });
             
-            // Detect orientation of media items and load video thumbnails
-            detectMediaOrientation();
-            generateVideoThumbnails();
+            // Detect orientation and load video thumbnails only within this modal
+            detectMediaOrientation(modal);
+            generateVideoThumbnails(modal);
         }
 
         function createIndicators(container, totalItems) {
@@ -190,79 +190,62 @@
         }
 
         // Auto-detect and apply portrait/landscape classes to gallery items
-        function detectMediaOrientation() {
-            document.querySelectorAll('.media-item').forEach(item => {
+        function detectMediaOrientation(root = document) {
+            root.querySelectorAll('.media-item').forEach(item => {
                 const img = item.querySelector('img');
                 const video = item.querySelector('video');
+
+                const applyOrientation = (width, height) => {
+                    item.classList.remove('portrait', 'landscape');
+                    item.classList.add(height > width ? 'portrait' : 'landscape');
+                };
                 
                 if (img) {
-                    // Check if image is already loaded
-                    if (img.complete) {
-                        const isPortrait = img.naturalHeight > img.naturalWidth;
-                        item.classList.add(isPortrait ? 'portrait' : 'landscape');
+                    if (img.complete && img.naturalWidth) {
+                        applyOrientation(img.naturalWidth, img.naturalHeight);
                     } else {
-                        // Wait for image to load
                         img.addEventListener('load', function() {
-                            const isPortrait = this.naturalHeight > this.naturalWidth;
-                            item.classList.add(isPortrait ? 'portrait' : 'landscape');
-                        });
+                            applyOrientation(this.naturalWidth, this.naturalHeight);
+                        }, { once: true });
                     }
                 } else if (video) {
-                    video.addEventListener('loadedmetadata', function() {
-                        const isPortrait = this.videoHeight > this.videoWidth;
-                        item.classList.add(isPortrait ? 'portrait' : 'landscape');
-                    });
+                    if (video.readyState >= 1) {
+                        applyOrientation(video.videoWidth, video.videoHeight);
+                    } else {
+                        video.addEventListener('loadedmetadata', function() {
+                            applyOrientation(this.videoWidth, this.videoHeight);
+                        }, { once: true });
+                    }
                 }
             });
         }
 
-        // Enhanced Media Modal with Portrait Detection
+        // Open the selected media directly so stale metadata callbacks cannot replace it.
         function openMediaModal(mediaItem) {
             const modal = document.getElementById('media-modal');
             const modalContent = document.getElementById('media-modal-content');
-            
             const img = mediaItem.querySelector('img');
             const video = mediaItem.querySelector('video');
-            
+
             if (img) {
-                // Create new image to detect dimensions
-                const newImg = new Image();
-                newImg.onload = function() {
-                    const isPortrait = this.naturalHeight > this.naturalWidth;
-                    const aspectRatio = this.naturalWidth / this.naturalHeight;
-                    
-                    // Apply appropriate styling based on orientation
-                    if (isPortrait) {
-                        modalContent.innerHTML = `<img src="${img.src}" alt="${img.alt}" style="max-width: 60vw; max-height: 90vh; aspect-ratio: ${aspectRatio};">`;
-                    } else {
-                        modalContent.innerHTML = `<img src="${img.src}" alt="${img.alt}" style="max-width: 90vw; max-height: 70vh; aspect-ratio: ${aspectRatio};">`;
-                    }
-                };
-                newImg.src = img.src;
-                
-                // Fallback while loading
-                modalContent.innerHTML = `<img src="${img.src}" alt="${img.alt}">`;
-                
+                const isPortrait = mediaItem.classList.contains('portrait') ||
+                    (img.naturalWidth > 0 && img.naturalHeight > img.naturalWidth);
+                const sizeStyle = isPortrait
+                    ? 'max-width: 60vw; max-height: 90vh;'
+                    : 'max-width: 90vw; max-height: 70vh;';
+                modalContent.innerHTML = `<img src="${img.src}" alt="${img.alt}" style="${sizeStyle}">`;
             } else if (video) {
-                const videoSrc = video.querySelector('source').src;
-                
-                // Create temporary video to detect dimensions
-                const tempVideo = document.createElement('video');
-                tempVideo.addEventListener('loadedmetadata', function() {
-                    const isPortrait = this.videoHeight > this.videoWidth;
-                    const aspectRatio = this.videoWidth / this.videoHeight;
-                    
-                    // Apply appropriate styling based on orientation
-                    if (isPortrait) {
-                        modalContent.innerHTML = `<video controls autoplay style="max-width: 60vw; max-height: 90vh; aspect-ratio: ${aspectRatio};"><source src="${videoSrc}" type="video/mp4"></video>`;
-                    } else {
-                        modalContent.innerHTML = `<video controls autoplay style="max-width: 90vw; max-height: 70vh; aspect-ratio: ${aspectRatio};"><source src="${videoSrc}" type="video/mp4"></video>`;
-                    }
-                });
-                tempVideo.src = videoSrc;
-                
-                // Fallback while loading
-                modalContent.innerHTML = `<video controls autoplay><source src="${videoSrc}" type="video/mp4"></video>`;
+                const source = video.querySelector('source');
+                if (!source) return;
+
+                const isPortrait = mediaItem.classList.contains('portrait') ||
+                    (video.videoWidth > 0 && video.videoHeight > video.videoWidth);
+                const sizeStyle = isPortrait
+                    ? 'max-width: 60vw; max-height: 90vh;'
+                    : 'max-width: 90vw; max-height: 70vh;';
+                modalContent.innerHTML = `<video controls autoplay playsinline style="${sizeStyle}"><source src="${source.src}" type="${source.type || 'video/mp4'}"></video>`;
+            } else {
+                return;
             }
             
             modal.style.display = 'block';
@@ -338,8 +321,8 @@
         }
         
         // OPTIMIZED Video thumbnail generation
-        function generateVideoThumbnails() {
-            document.querySelectorAll('.media-item video').forEach(video => {
+        function generateVideoThumbnails(root = document) {
+            root.querySelectorAll('.media-item video').forEach(video => {
                 // Simple thumbnail loading without complex event handling
                 video.addEventListener('loadeddata', function() {
                     this.currentTime = 0.1; // Very short time for thumbnail
@@ -509,21 +492,29 @@ function toggleMoreProjects() {
 // App Store logo cards: delegate click/keyboard to open project modal
 const storeGrid = document.querySelector('.appstore-track');
 if (storeGrid) {
+    function activateStoreCard(card) {
+        const appLink = card.dataset.appLink;
+        if (appLink) {
+            window.open(appLink, '_blank', 'noopener');
+            return;
+        }
+
+        const modalId = card.dataset.modal;
+        if (modalId) openModal(modalId);
+    }
+
     storeGrid.addEventListener('click', (event) => {
         const card = event.target.closest('.store-card.logo-only');
         if (!card || !storeGrid.contains(card)) return;
-        const appLink = card.dataset.appLink;
-        if (!appLink) return;
-        window.open(appLink, '_blank', 'noopener');
+        activateStoreCard(card);
     });
+
     storeGrid.addEventListener('keydown', (event) => {
         if (event.key !== 'Enter' && event.key !== ' ') return;
         const card = event.target.closest('.store-card.logo-only');
         if (!card || !storeGrid.contains(card)) return;
         event.preventDefault();
-        const appLink = card.dataset.appLink;
-        if (!appLink) return;
-        window.open(appLink, '_blank', 'noopener');
+        activateStoreCard(card);
     });
 
     storeGrid.addEventListener('auxclick', (event) => {

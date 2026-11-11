@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Splitin app icon</title>
+  <desc id="desc">A gold and white receipt with the letter S on a dark blue background.</desc>
+  <defs>
+    <radialGradient id="background" cx="50%" cy="38%" r="72%">
+      <stop offset="0" stop-color="#294f82"/>
+      <stop offset="1" stop-color="#102e56"/>
+    </radialGradient>
+    <linearGradient id="paperGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#dfc180"/>
+      <stop offset="1" stop-color="#d4b270"/>
+    </linearGradient>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#background)"/>
+  <path fill="url(#paperGold)" d="M291 127h430c36 0 66 30 66 66v338L227 757V193c0-36 29-66 64-66Z"/>
+  <path fill="#f7f3e9" d="M237 782 797 556v305l-46 36-47-36-47 36-47-36-47 36-47-36-47 36-47-36-47 36-47-36-46 36-46-36Z"/>
+  <path fill="#1b3c70" d="M516 218c56 0 89 27 102 76l-50 22c-11-30-29-44-56-44-31 0-50 13-50 34 0 20 16 29 59 44 68 24 97 49 97 96 0 51-40 80-104 80-62 0-105-31-124-84l51-23c15 35 39 53 72 53 29 0 44-12 44-33 0-19-15-30-58-45-65-23-99-48-99-96 0-49 42-80 116-80Z"/>
+</svg>
