@@ -191,16 +191,16 @@
                     </div>
                 </div>
             
-                <div class="project-card fade-in hidden-project" onclick="openModal('ASDEduplay-modal')">
+                <div class="project-card fade-in hidden-project" onclick="openModal('specialkids-modal')">
                     <div class="project-image">
-                        <img src="assetsGame/bannerASDEduplay.png" alt="ASDEduplay Banner" class="project-banner">
+                        <img src="assetsApps/SpecialKids/Banner.jpg" alt="SpecialKids Banner" class="project-banner">
                         <div class="project-overlay">
                             <span class="view-details">View Details</span>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">ASD Eduplay</h3>
-                        <p class="project-description">Safe, sensory-friendly learning playground for children with Autism Spectrum Disorder, focused on confidence-building mini games.</p>
+                        <h3 class="project-title">SpecialKids</h3>
+                        <p class="project-description">Calm, wordless learning games for young children, including autistic children. 7 games and 3 stories, with no ads and no tracking.</p>
                         <div class="tech-tags">
                             <span class="tech-tag"><span>SwiftUI</span></span>
                             <span class="tech-tag"><span>AVFoundation</span></span>
@@ -332,12 +332,12 @@
                         </div>
                     </div>
 
-                    <div class="store-card logo-only fade-in" data-modal="ASDEduplay-modal" data-app-link="https://apps.apple.com/us/app/asd-eduplay/id6745112592" aria-label="ASD Eduplay" tabindex="0">
+                    <div class="store-card logo-only fade-in" data-modal="specialkids-modal" data-app-link="https://apps.apple.com/us/app/asd-eduplay/id6745112592" aria-label="SpecialKids" tabindex="0">
                         <div class="store-image-wrap logo-only">
-                            <img src="assetsGame/LogoASD.png" alt="ASD Eduplay app logo" class="store-logo">
+                            <img src="assetsGame/LogoASD.png" alt="SpecialKids app logo" class="store-logo">
                         </div>
                         <div class="store-label">
-                            <div class="store-name">ASD Eduplay</div>
+                            <div class="store-name">SpecialKids</div>
                         </div>
                     </div>
                 </div>
@@ -1021,55 +1021,80 @@
     </div>
 </div>
 
-   <div id="ASDEduplay-modal" class="modal">
+   <div id="specialkids-modal" class="modal">
     <div class="modal-content">
-        <button class="close-btn" onclick="closeModal('ASDEduplay-modal')">&times;</button>
-        <h2>ASD Eduplay</h2>
+        <button class="close-btn" onclick="closeModal('specialkids-modal')">&times;</button>
+        <h2>SpecialKids</h2>
 
         <!-- Project Banner -->
         <div class="modal-banner">
-            <img src="assetsGame/bannerASDEduplay.png" alt="ASD Eduplay Banner" class="modal-banner-img">
+            <img src="assetsApps/SpecialKids/Banner.jpg" alt="SpecialKids Banner" class="modal-banner-img">
         </div>
 
-        <p>Designed as a safe learning playground for children with Autism Spectrum Disorder (ASD). Interactive mini-games support early development, focus, and coordination with sensory-friendly visuals and adaptive feedback that celebrates every achievement.</p>
+        <p>SpecialKids is a calm place for young children to practise matching, sorting, tracing, feelings and daily routines. It was made with autistic children in mind, and works well for any child who likes things quiet and predictable. Feedback uses soft sounds and pictures instead of talking, with no sad faces, red crosses or countdowns.</p>
 
         <h3>Key Features:</h3>
         <ul>
-            <li>Sensory-friendly UI with customizable sound and visual feedback.</li>
-            <li>Mini-games designed with autism specialists to build focus and coordination.</li>
-            <li>Positive reinforcement loops to keep kids motivated and confident.</li>
+            <li>7 wordless games, each with 12 themes: Jigsaw, Matching, Sorting, Tracing, Feelings, My Routine and Sound Match.</li>
+            <li>Sensory settings for grown-ups: music, sound effects, vibration, voice and reduced motion, or all at once with Quiet Mode.</li>
+            <li>Levels that move up when a child is ready and stay put when they need more practice.</li>
+            <li>A grown-ups area (hold to open) with play insights and a shareable summary for a therapist or teacher.</li>
+            <li>3 calm picture stories and a Free Play mode with no goals and no scores.</li>
+            <li>No ads, no tracking, no data collected. Available in English and Bahasa Indonesia.</li>
         </ul>
 
         <h3>Technology Stack:</h3>
          <div class="tech-tags">
                             <span class="tech-tag"><span>SwiftUI</span></span>
                             <span class="tech-tag"><span>AVFoundation</span></span>
+                            <span class="tech-tag"><span>StoreKit 2</span></span>
                         </div>
 
         <h3 data-type="photos">Photos</h3>
         <div class="media-gallery">
-            <div class="media-container" id="asdeduplay-photos" data-count="3">
-                <button class="media-nav prev" onclick="navigateMedia('asdeduplay-photos', -1)">‹</button>
+            <div class="media-container" id="specialkids-photos" data-count="10">
+                <button class="media-nav prev" onclick="navigateMedia('specialkids-photos', -1)">‹</button>
                 <div class="media-slider">
                     <div class="media-item" data-type="photo" onclick="openMediaModal(this)">
-                        <img src="assetsGame/ASDSS2.png" alt="ASD Eduplay Screenshot 1">
+                        <img src="assetsApps/SpecialKids/Screenshots/01.jpg" alt="SpecialKids Home">
                     </div>
                     <div class="media-item" data-type="photo" onclick="openMediaModal(this)">
-                        <img src="assetsGame/ASDSS3.png" alt="ASD Eduplay Screenshot 2">
+                        <img src="assetsApps/SpecialKids/Screenshots/02.jpg" alt="SpecialKids Game menu">
                     </div>
                     <div class="media-item" data-type="photo" onclick="openMediaModal(this)">
-                        <img src="assetsGame/ASDSS4.png" alt="ASD Eduplay Screenshot 3">
+                        <img src="assetsApps/SpecialKids/Screenshots/03.jpg" alt="SpecialKids Jigsaw themes">
+                    </div>
+                    <div class="media-item" data-type="photo" onclick="openMediaModal(this)">
+                        <img src="assetsApps/SpecialKids/Screenshots/04.jpg" alt="SpecialKids Jigsaw puzzle">
+                    </div>
+                    <div class="media-item" data-type="photo" onclick="openMediaModal(this)">
+                        <img src="assetsApps/SpecialKids/Screenshots/05.jpg" alt="SpecialKids Matching">
+                    </div>
+                    <div class="media-item" data-type="photo" onclick="openMediaModal(this)">
+                        <img src="assetsApps/SpecialKids/Screenshots/06.jpg" alt="SpecialKids Sorting">
+                    </div>
+                    <div class="media-item" data-type="photo" onclick="openMediaModal(this)">
+                        <img src="assetsApps/SpecialKids/Screenshots/07.jpg" alt="SpecialKids Tracing">
+                    </div>
+                    <div class="media-item" data-type="photo" onclick="openMediaModal(this)">
+                        <img src="assetsApps/SpecialKids/Screenshots/08.jpg" alt="SpecialKids Feelings">
+                    </div>
+                    <div class="media-item" data-type="photo" onclick="openMediaModal(this)">
+                        <img src="assetsApps/SpecialKids/Screenshots/09.jpg" alt="SpecialKids My Routine">
+                    </div>
+                    <div class="media-item" data-type="photo" onclick="openMediaModal(this)">
+                        <img src="assetsApps/SpecialKids/Screenshots/10.jpg" alt="SpecialKids Sound Match">
                     </div>
                 </div>
-                <button class="media-nav next" onclick="navigateMedia('asdeduplay-photos', 1)">›</button>
+                <button class="media-nav next" onclick="navigateMedia('specialkids-photos', 1)">›</button>
             </div>
-            <div class="media-indicators" id="asdeduplay-photos-indicators"></div>
+            <div class="media-indicators" id="specialkids-photos-indicators"></div>
         </div>
 
         <h3 data-type="videos">Videos</h3>
         <div class="media-gallery">
-            <div class="media-container" id="asdeduplay-videos" data-count="3">
-                <button class="media-nav prev" onclick="navigateMedia('asdeduplay-videos', -1)">‹</button>
+            <div class="media-container" id="specialkids-videos" data-count="3">
+                <button class="media-nav prev" onclick="navigateMedia('specialkids-videos', -1)">‹</button>
                 <div class="media-slider">
                     <div class="media-item" data-type="video" onclick="openMediaModal(this)">
                         <video preload="metadata" muted>
@@ -1090,9 +1115,9 @@
                         <div class="video-overlay">▶</div>
                     </div>
                 </div>
-                <button class="media-nav next" onclick="navigateMedia('asdeduplay-videos', 1)">›</button>
+                <button class="media-nav next" onclick="navigateMedia('specialkids-videos', 1)">›</button>
             </div>
-            <div class="media-indicators" id="asdeduplay-videos-indicators"></div>
+            <div class="media-indicators" id="specialkids-videos-indicators"></div>
         </div>
     </div>
 </div>
