@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CopyDoc — Privacy Policy</title>
   <style>
-    :root { --bg:#f7f7fb; --text:#14152b; --muted:#4a4d68; --brand:#3b2fc9; --line:#dedcef; }
-    @media (prefers-color-scheme: dark) { :root { --bg:#0e0f1f; --text:#f2f2f8; --muted:#a5a7c0; --brand:#a9a3ff; --line:#2c2d48; } }
+    :root { --bg:#f7f7fb; --text:#14152b; --muted:#4a4d68; --brand:#3b2fc9; --line:#dedcef; --card:#ffffff; }
+    @media (prefers-color-scheme: dark) { :root { --bg:#0e0f1f; --text:#f2f2f8; --muted:#a5a7c0; --brand:#a9a3ff; --line:#2c2d48; --card:#17182d; } }
     * { box-sizing: border-box; }
     body { margin:0; background:var(--bg); color:var(--text); font:17px/1.65 -apple-system, system-ui, sans-serif; }
     main { max-width:680px; margin:0 auto; padding:40px 20px 64px; }
@@ -17,12 +17,17 @@
     h2 { font-size:19px; margin:28px 0 4px; }
     p { margin:0; color:var(--muted); }
     .date { margin-bottom:20px; }
+    .jump { margin:0 0 20px; font-size:15px; }
+    .summary { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:18px 20px; margin:0 0 8px; }
+    .summary h2 { margin:6px 0; }
+    .summary ul { margin:0; padding-left:22px; color:var(--muted); }
+    .summary li { margin:5px 0; }
     .lang { margin-top:44px; padding-top:28px; border-top:1px solid var(--line); }
     a { color:var(--brand); }
     footer { margin-top:28px; font-size:14px; color:var(--muted); }
   </style>
 </head>
-<body>
+<body id="top">
   <main>
     <header>
       <span class="brand">CopyDoc</span>
@@ -31,7 +36,17 @@
 
     <h1>CopyDoc Privacy Policy</h1>
     <p class="date">Last updated: 26 November 2026</p>
-    <p>CopyDoc is a document scanner for iPhone. This page explains what the app does with your information. In short: your files never leave your phone.</p>
+    <p class="jump">Read this page in <a href="#id" lang="id">Bahasa Indonesia</a> &middot; Need help? See <a href="support.html">Support</a>.</p>
+
+    <div class="summary">
+      <h2>The short version</h2>
+      <ul>
+        <li><strong>No data collected.</strong> No account, no analytics, no ads, no tracking.</li>
+        <li><strong>No uploads.</strong> Your scans, PDFs, signatures and recognised text stay on your iPhone.</li>
+        <li><strong>No access needed.</strong> Camera and Face ID are used only while you scan or unlock, and only if you allow them.</li>
+      </ul>
+    </div>
+    <p>CopyDoc is a document scanner for iPhone. This page explains, in plain language, everything the app does with your information.</p>
 
     <h2>Your files stay on your phone</h2>
     <p>Scans, PDFs, signatures and the words we read from your pages are stored only on this phone. We never upload them.</p>
@@ -54,16 +69,32 @@
     <h2>CopyDoc Pro purchases</h2>
     <p>CopyDoc Pro is bought from Apple. Apple handles the payment, your Apple ID, and billing details; we never see your card. The app only stores whether Pro is active on this phone. Apple's privacy policy applies to the purchase.</p>
 
-    <h2>Delete everything</h2>
-    <p>Delete a file in Files and it is gone. Deleting the app removes everything it stored on the phone.</p>
+    <h2>Your choices</h2>
+    <p>You can use CopyDoc entirely offline. Deleting a file moves it to Recently deleted, where you can put it back or remove it for good. Deleting the app removes everything it stored on the phone.</p>
+
+    <h2>Children</h2>
+    <p>CopyDoc is a general-purpose tool for paperwork, not a children's app. Because the app collects no personal information at all, it does not knowingly collect anything from children.</p>
+
+    <h2>Changes</h2>
+    <p>If this policy ever changes, we update the date above. If a future version of the app started sending data anywhere, this page would say so before that version shipped.</p>
 
     <h2>Contact</h2>
     <p>Questions? Email <a href="mailto:alvinreyvaldo1@gmail.com?subject=CopyDoc%20Privacy">alvinreyvaldo1@gmail.com</a>.</p>
 
-    <section class="lang" lang="id">
+    <section class="lang" id="id" lang="id">
       <h1>Kebijakan Privasi CopyDoc</h1>
       <p class="date">Terakhir diperbarui: 26 November 2026</p>
-      <p>CopyDoc adalah aplikasi pemindai dokumen untuk iPhone. Halaman ini menjelaskan apa yang dilakukan aplikasi dengan informasimu. Singkatnya: file-mu tidak pernah keluar dari HP.</p>
+      <p class="jump"><a href="#top" onclick="window.scrollTo(0,0);return false;">Baca halaman ini dalam Bahasa Inggris</a> &middot; Butuh bantuan? Lihat <a href="support.html">Dukungan</a>.</p>
+
+      <div class="summary">
+        <h2>Singkatnya</h2>
+        <ul>
+          <li><strong>Tanpa data dikumpulkan.</strong> Tanpa akun, tanpa analitik, tanpa iklan, tanpa pelacakan.</li>
+          <li><strong>Tanpa unggahan.</strong> Hasil scan, PDF, tanda tangan, dan teks yang dikenali tetap di iPhone-mu.</li>
+          <li><strong>Tanpa akses berlebih.</strong> Kamera dan Face ID hanya dipakai saat kamu memindai atau membuka kunci, dan hanya kalau kamu izinkan.</li>
+        </ul>
+      </div>
+      <p>CopyDoc adalah aplikasi pemindai dokumen untuk iPhone. Halaman ini menjelaskan dengan bahasa sederhana apa yang dilakukan aplikasi dengan informasimu.</p>
 
       <h2>File-mu tetap di HP</h2>
       <p>Hasil scan, PDF, tanda tangan, dan kata yang kami baca dari halamanmu hanya disimpan di HP ini. Kami tidak pernah mengunggahnya.</p>
@@ -86,8 +117,14 @@
       <h2>Pembelian CopyDoc Pro</h2>
       <p>CopyDoc Pro dibeli dari Apple. Apple menangani pembayaran, Apple ID, dan detail tagihan; kami tidak pernah melihat kartumu. Aplikasi hanya menyimpan apakah Pro aktif di HP ini. Kebijakan privasi Apple berlaku untuk pembelian tersebut.</p>
 
-      <h2>Hapus semuanya</h2>
-      <p>Hapus file di File dan file itu hilang. Menghapus aplikasi akan menghapus semua yang tersimpan di HP.</p>
+      <h2>Pilihanmu</h2>
+      <p>CopyDoc bisa dipakai sepenuhnya tanpa internet. Menghapus file memindahkannya ke Terakhir dihapus, tempat kamu bisa mengembalikannya atau menghapusnya permanen. Menghapus aplikasi akan menghapus semua yang tersimpan di HP.</p>
+
+      <h2>Anak-anak</h2>
+      <p>CopyDoc adalah alat umum untuk urusan dokumen, bukan aplikasi anak. Karena aplikasi ini sama sekali tidak mengumpulkan informasi pribadi, tidak ada data anak yang dikumpulkan.</p>
+
+      <h2>Perubahan</h2>
+      <p>Kalau kebijakan ini berubah, tanggal di atas kami perbarui. Kalau versi berikutnya mulai mengirim data ke suatu tempat, halaman ini akan menjelaskannya sebelum versi itu dirilis.</p>
 
       <h2>Kontak</h2>
       <p>Ada pertanyaan? Email <a href="mailto:alvinreyvaldo1@gmail.com?subject=CopyDoc%20Privacy">alvinreyvaldo1@gmail.com</a>.</p>

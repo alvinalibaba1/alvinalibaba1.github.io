@@ -14,16 +14,22 @@
     .brand { font-weight:800; color:var(--brand); letter-spacing:-.02em; }
     nav a { margin-left:14px; font-size:15px; font-weight:600; }
     h1 { font-size:34px; margin:0 0 6px; color:var(--brand); letter-spacing:-.03em; }
-    .lead { color:var(--muted); margin:0 0 24px; }
+    .lead { color:var(--muted); margin:0 0 8px; }
+    .jump { margin:0 0 24px; font-size:15px; color:var(--muted); }
+    .jump a { font-weight:600; }
     .card { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:20px; margin:16px 0; }
     h2 { font-size:18px; margin:0 0 6px; }
     p { margin:0; color:var(--muted); }
+    ul { margin:8px 0 0; padding-left:22px; color:var(--muted); }
+    li { margin:4px 0; }
     a { color:var(--brand); }
     .contact { font-size:18px; }
+    section.lang { margin-top:52px; padding-top:36px; border-top:1px solid var(--line); }
+    section.lang h1 { font-size:32px; }
     .foot { margin-top:28px; font-size:14px; color:var(--muted); }
   </style>
 </head>
-<body>
+<body id="top">
   <main>
     <header>
       <span class="brand">CopyDoc</span>
@@ -32,10 +38,11 @@
 
     <h1>CopyDoc Support</h1>
     <p class="lead">Help with scanning, Pro, and your files.</p>
+    <p class="jump">Read this page in <a href="#id" lang="id">Bahasa Indonesia</a>.</p>
 
     <div class="card">
       <h2>Talk to us</h2>
-      <p class="contact">Email <a href="mailto:alvinreyvaldo1@gmail.com?subject=CopyDoc%20Support">alvinreyvaldo1@gmail.com</a>. Tell us your iPhone model and iOS version, and what happened. We usually reply within two working days.</p>
+      <p class="contact">Email <a href="mailto:alvinreyvaldo1@gmail.com?subject=CopyDoc%20Support">alvinreyvaldo1@gmail.com</a>. Tell us your iPhone model, your iOS version, and what happened (the version is on the Account screen). A screenshot helps. We usually reply within two working days.</p>
     </div>
 
     <div class="card">
@@ -45,35 +52,123 @@
 
     <div class="card">
       <h2>How do I restore CopyDoc Pro?</h2>
-      <p>Open Account → See Premium, then tap <strong>Restore purchases</strong>. Use the same Apple ID you bought Pro with.</p>
+      <p>Open Account &rarr; See Premium, then tap <strong>Restore purchases</strong>. Use the same Apple ID you bought Pro with. Purchases are tied to that Apple ID, not to the phone.</p>
     </div>
 
     <div class="card">
       <h2>How do I cancel a subscription?</h2>
-      <p>Open iPhone Settings → your name → Subscriptions → CopyDoc, then cancel. Deleting the app does not cancel a subscription. Lifetime is a one-time purchase and does not renew.</p>
+      <p>Open iPhone Settings &rarr; your name &rarr; Subscriptions &rarr; CopyDoc, then tap Cancel Subscription. Deleting the app does not cancel a subscription. Lifetime is a one-time purchase and does not renew.</p>
     </div>
 
     <div class="card">
       <h2>Where are my files?</h2>
-      <p>Scans and PDFs stay on your iPhone, inside CopyDoc. Nothing is uploaded. Deleting the app removes the files it stored, so share anything you want to keep first.</p>
+      <p>Scans and PDFs stay on your iPhone, inside CopyDoc. Nothing is uploaded, so there is no account and no sync. Deleting the app removes the files it stored, so share anything you want to keep first.</p>
+    </div>
+
+    <div class="card">
+      <h2>How do I get a cleaner scan?</h2>
+      <p>Lay the page on a flat surface, fill the frame, and hold still while the outline settles. On the review screen you can retake, crop, turn or change the look of a page. For ID cards, use ID Card mode: front and back end up on one A4 page at real size.</p>
+    </div>
+
+    <div class="card">
+      <h2>How do I delete a file, or get it back?</h2>
+      <p>Deleting a file moves it to <strong>Recently deleted</strong> and shows an Undo button. To restore or remove it for good, open Files, then tap Recently deleted at the bottom. A file deleted from there cannot be recovered.</p>
     </div>
 
     <div class="card">
       <h2>Copy Text says I need Pro</h2>
-      <p>Copy Text is a Pro tool. You can try it free three times across all Pro tools. If the three tries are used, open Account → See Premium to unlock everything.</p>
+      <p>Copy Text is a Pro tool. You can try it free three times across all Pro tools. If the three tries are used, open Account &rarr; See Premium to unlock everything.</p>
     </div>
 
     <div class="card">
       <h2>Camera or Face ID does not work</h2>
-      <p>Open iPhone Settings → CopyDoc and turn on Camera (or Face ID). CopyDoc only uses the camera while you are scanning. Face ID is optional.</p>
+      <p>Open iPhone Settings &rarr; CopyDoc and turn on Camera (or Face ID). CopyDoc only uses the camera while you are scanning. Face ID is optional.</p>
     </div>
 
     <div class="card">
-      <h2>Which iPhones are supported?</h2>
+      <h2>Which iPhones and iOS versions are supported?</h2>
       <p>CopyDoc 1.0 needs iOS 16.4 or later. Camera scanning works on a real iPhone; the simulator cannot scan.</p>
     </div>
 
-    <p class="foot">Prices are shown in the App Store and may include local tax. Apple handles payment and refunds. <a href="privacy.html">Privacy Policy</a> &middot; <a href="../index.html">Portfolio</a></p>
+    <div class="card">
+      <h2>Which languages does it speak?</h2>
+      <p>English and Bahasa Indonesia. CopyDoc follows the language of your iPhone. You can also change it for this app only in iPhone Settings &rarr; CopyDoc &rarr; Language.</p>
+    </div>
+
+    <div class="card">
+      <h2>Can I get a refund?</h2>
+      <p>Apple handles payment, billing and refunds, so we cannot issue a refund ourselves. Request one at <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a> or contact Apple Support. Your purchase history stays with your Apple ID.</p>
+    </div>
+
+    <p class="foot">Prices are shown in the App Store and may include local tax. <a href="privacy.html">Privacy Policy</a> &middot; <a href="../index.html">Portfolio</a></p>
+
+    <section class="lang" id="id" lang="id">
+      <h1>Dukungan CopyDoc</h1>
+      <p class="lead">Bantuan untuk memindai, Pro, dan file-mu.</p>
+      <p class="jump"><a href="#top" onclick="window.scrollTo(0,0);return false;">Baca halaman ini dalam Bahasa Inggris</a>.</p>
+
+      <div class="card">
+        <h2>Hubungi kami</h2>
+        <p class="contact">Email <a href="mailto:alvinreyvaldo1@gmail.com?subject=CopyDoc%20Support">alvinreyvaldo1@gmail.com</a>. Sertakan model iPhone, versi iOS, dan apa yang terjadi (versinya ada di layar Akun). Tangkapan layar sangat membantu. Biasanya kami balas dalam dua hari kerja.</p>
+      </div>
+
+      <div class="card">
+        <h2>Apakah CopyDoc gratis?</h2>
+        <p>Memindai, merapikan, menyimpan, berbagi, folder, Face ID, dan tanda tangan dasar gratis, tanpa batas scan, tanpa watermark, dan tanpa iklan. Salin Teks, Ke Word, Tandai, Kunci PDF, Gabung, Halaman, Perkecil PDF, dan pencarian di dalam file adalah alat Pro. Kamu dapat tiga percobaan Pro gratis sebelum membayar.</p>
+      </div>
+
+      <div class="card">
+        <h2>Bagaimana cara memulihkan CopyDoc Pro?</h2>
+        <p>Buka Akun &rarr; Lihat Premium, lalu ketuk <strong>Pulihkan pembelian</strong>. Gunakan Apple ID yang sama dengan saat membeli Pro. Pembelian terikat ke Apple ID itu, bukan ke HP-nya.</p>
+      </div>
+
+      <div class="card">
+        <h2>Bagaimana cara membatalkan langganan?</h2>
+        <p>Buka Pengaturan iPhone &rarr; namamu &rarr; Langganan &rarr; CopyDoc, lalu ketuk Batalkan Langganan. Menghapus aplikasi tidak membatalkan langganan. Paket seumur hidup adalah pembelian sekali dan tidak diperpanjang.</p>
+      </div>
+
+      <div class="card">
+        <h2>Di mana file saya?</h2>
+        <p>Hasil scan dan PDF tersimpan di iPhone-mu, di dalam CopyDoc. Tidak ada yang diunggah, jadi tidak ada akun dan tidak ada sinkronisasi. Menghapus aplikasi akan menghapus file yang tersimpan, jadi bagikan dulu yang ingin kamu simpan.</p>
+      </div>
+
+      <div class="card">
+        <h2>Bagaimana hasil scan lebih rapi?</h2>
+        <p>Letakkan halaman di permukaan datar, isi bingkai, dan tahan HP diam sampai garis tepinya mantap. Di layar tinjau kamu bisa ulangi, potong, putar, atau ubah tampilan halaman. Untuk KTP, pakai mode KTP: depan dan belakang jadi satu halaman A4 ukuran asli.</p>
+      </div>
+
+      <div class="card">
+        <h2>Bagaimana menghapus file, atau mengembalikannya?</h2>
+        <p>Menghapus file memindahkannya ke <strong>Terakhir dihapus</strong> dan muncul tombol Urungkan. Untuk mengembalikan atau menghapus permanen, buka File, lalu ketuk Terakhir dihapus di bagian bawah. File yang sudah dihapus dari sana tidak bisa dikembalikan.</p>
+      </div>
+
+      <div class="card">
+        <h2>Salin Teks minta Pro</h2>
+        <p>Salin Teks adalah alat Pro. Kamu bisa mencobanya gratis tiga kali untuk semua alat Pro. Kalau tiga percobaannya sudah habis, buka Akun &rarr; Lihat Premium untuk membuka semuanya.</p>
+      </div>
+
+      <div class="card">
+        <h2>Kamera atau Face ID tidak berfungsi</h2>
+        <p>Buka Pengaturan iPhone &rarr; CopyDoc dan nyalakan Kamera (atau Face ID). CopyDoc hanya memakai kamera saat kamu memindai. Face ID opsional.</p>
+      </div>
+
+      <div class="card">
+        <h2>iPhone dan iOS apa yang didukung?</h2>
+        <p>CopyDoc 1.0 butuh iOS 16.4 atau lebih baru. Pemindaian kamera jalan di iPhone asli; simulator tidak bisa memindai.</p>
+      </div>
+
+      <div class="card">
+        <h2>Bahasa apa saja yang didukung?</h2>
+        <p>Inggris dan Bahasa Indonesia. CopyDoc mengikuti bahasa iPhone-mu. Kamu juga bisa mengubahnya khusus untuk aplikasi ini di Pengaturan iPhone &rarr; CopyDoc &rarr; Bahasa.</p>
+      </div>
+
+      <div class="card">
+        <h2>Bisakah saya minta pengembalian dana?</h2>
+        <p>Apple yang mengurus pembayaran, tagihan, dan pengembalian dana, jadi kami tidak bisa mengembalikan dana langsung. Ajukan lewat <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a> atau hubungi Dukungan Apple. Riwayat pembelian tetap di Apple ID-mu.</p>
+      </div>
+
+      <p class="foot">Harga tertera di App Store dan bisa termasuk pajak setempat. <a href="privacy.html">Kebijakan Privasi</a> &middot; <a href="../index.html">Portofolio</a></p>
+    </section>
   </main>
 </body>
 </html>
