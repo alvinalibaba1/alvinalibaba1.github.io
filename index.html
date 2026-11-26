@@ -66,7 +66,7 @@
                         <div class="stat-label">Years Experience</div>
                     </div>
                     <div class="stat-card">
-                        <div class="stat-number">9+</div>
+                        <div class="stat-number">11+</div>
                         <div class="stat-label">Projects Completed</div>
                     </div>
                 </div>
@@ -79,6 +79,28 @@
         <div class="container">
             <h2 class="section-title fade-in">Recent Projects</h2>
             <div class="projects-grid">
+
+                <div class="project-card fade-in" onclick="openModal('copydoc-modal')">
+                    <div class="project-image">
+                        <img src="assetsApps/CopyDoc/Banner.png" alt="CopyDoc Banner" class="project-banner">
+                        <div class="project-overlay">
+                            <span class="view-details">View Details</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">CopyDoc</h3>
+                        <p class="project-description">The document scanner that stays out of your way. Turn a page into a clean PDF, sign it, mark it up, copy its text or turn it into Word, with no watermark, no ads, and every file kept on your iPhone.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag"><span>React Native</span></span>
+                            <span class="tech-tag"><span>Expo</span></span>
+                            <span class="tech-tag"><span>TypeScript</span></span>
+                            <span class="tech-tag"><span>Swift</span></span>
+                            <span class="tech-tag"><span>VisionKit</span></span>
+                            <span class="tech-tag"><span>PDFKit</span></span>
+                            <span class="tech-tag"><span>StoreKit 2</span></span>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="project-card fade-in" onclick="openModal('splitin-modal')">
                     <div class="project-image">
@@ -338,6 +360,15 @@
                         </div>
                         <div class="store-label">
                             <div class="store-name">SpecialKids</div>
+                        </div>
+                    </div>
+
+                    <div class="store-card logo-only fade-in" data-modal="copydoc-modal" aria-label="CopyDoc" tabindex="0">
+                        <div class="store-image-wrap logo-only">
+                            <img src="assetsApps/CopyDoc/Logo.png" alt="CopyDoc app logo" class="store-logo">
+                        </div>
+                        <div class="store-label">
+                            <div class="store-name">CopyDoc</div>
                         </div>
                     </div>
                 </div>
@@ -1212,6 +1243,83 @@
                 <button class="media-nav next" onclick="navigateMedia('dailysprouts-photos', 1)">›</button>
             </div>
             <div class="media-indicators" id="dailysprouts-photos-indicators"></div>
+        </div>
+    </div>
+</div>
+
+   <div id="copydoc-modal" class="modal">
+    <div class="modal-content">
+        <button class="close-btn" onclick="closeModal('copydoc-modal')">&times;</button>
+        <h2>CopyDoc</h2>
+
+        <!-- Project Banner -->
+        <div class="modal-banner">
+            <img src="assetsApps/CopyDoc/Banner.png" alt="CopyDoc Banner" class="modal-banner-img">
+        </div>
+
+        <p><strong>Scan, sign and copy text.</strong> CopyDoc turns an iPhone into a document scanner that actually looks good. Point the camera at a page and it finds the edges, straightens and cleans it, so you get white paper and sharp text instead of a grey photo. Signing, marking up, merging and the rest of the paperwork live in the same app, and nothing is uploaded: scans, PDFs, signatures and recognised text stay on the phone. The interface is built with Expo and React Native, backed by a custom Swift module for capture, page detection, image cleanup, OCR and password-protected PDFs.</p>
+
+        <h3>Key Features:</h3>
+        <ul>
+            <li>Live page outline with automatic straightening and shadow cleanup</li>
+            <li>ID card mode that puts front and back on one A4 page at real size</li>
+            <li>Draw a signature once and place it on any PDF; mark up with text, highlights and pen</li>
+            <li>Copy Text with on-device OCR, or turn a PDF into an editable Word file</li>
+            <li>Merge, reorder, delete or extract pages, and shrink a PDF to fit an upload limit</li>
+            <li>Password-protect a PDF, search the words inside files, and organise everything in folders</li>
+            <li>Unlimited free scanning with no watermark and no ads; Pro tools with three free tries</li>
+            <li>English and Bahasa Indonesia, Face ID app lock, no account, no tracking, no uploads</li>
+        </ul>
+
+        <h3>Technology Stack:</h3>
+         <div class="tech-tags">
+                            <span class="tech-tag"><span>React Native</span></span>
+                            <span class="tech-tag"><span>Expo Router</span></span>
+                            <span class="tech-tag"><span>TypeScript</span></span>
+                            <span class="tech-tag"><span>Swift</span></span>
+                            <span class="tech-tag"><span>VisionKit</span></span>
+                            <span class="tech-tag"><span>Vision OCR</span></span>
+                            <span class="tech-tag"><span>PDFKit</span></span>
+                            <span class="tech-tag"><span>StoreKit 2</span></span>
+                            <span class="tech-tag"><span>LocalAuthentication</span></span>
+                        </div>
+
+        <h3>Support &amp; Legal:</h3>
+        <div class="app-links">
+            <a href="copydoc/support.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">Support</a>
+            <a href="copydoc/privacy.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">Privacy Policy</a>
+        </div>
+
+        <h3 data-type="photos">App Preview</h3>
+        <div class="media-gallery">
+            <div class="media-container" id="copydoc-photos" data-count="7">
+                <button class="media-nav prev" onclick="navigateMedia('copydoc-photos', -1)">‹</button>
+                <div class="media-slider">
+                    <div class="media-item" data-type="photo" onclick="openMediaModal(this)">
+                        <img src="assetsApps/CopyDoc/Screenshots/01-home.jpg" alt="CopyDoc home screen with scan shortcuts">
+                    </div>
+                    <div class="media-item" data-type="photo" onclick="openMediaModal(this)">
+                        <img src="assetsApps/CopyDoc/Screenshots/02-sign.jpg" alt="CopyDoc signing a PDF">
+                    </div>
+                    <div class="media-item" data-type="photo" onclick="openMediaModal(this)">
+                        <img src="assetsApps/CopyDoc/Screenshots/03-markup.jpg" alt="CopyDoc marking up a PDF">
+                    </div>
+                    <div class="media-item" data-type="photo" onclick="openMediaModal(this)">
+                        <img src="assetsApps/CopyDoc/Screenshots/04-text.jpg" alt="CopyDoc copying text from a page">
+                    </div>
+                    <div class="media-item" data-type="photo" onclick="openMediaModal(this)">
+                        <img src="assetsApps/CopyDoc/Screenshots/05-tools.jpg" alt="CopyDoc tools grid">
+                    </div>
+                    <div class="media-item" data-type="photo" onclick="openMediaModal(this)">
+                        <img src="assetsApps/CopyDoc/Screenshots/06-privacy.jpg" alt="CopyDoc privacy screen">
+                    </div>
+                    <div class="media-item" data-type="photo" onclick="openMediaModal(this)">
+                        <img src="assetsApps/CopyDoc/Screenshots/07-paywall.jpg" alt="CopyDoc Pro paywall">
+                    </div>
+                </div>
+                <button class="media-nav next" onclick="navigateMedia('copydoc-photos', 1)">›</button>
+            </div>
+            <div class="media-indicators" id="copydoc-photos-indicators"></div>
         </div>
     </div>
 </div>
