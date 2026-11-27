@@ -1582,6 +1582,11 @@
             opacity: 1;
         }
 
+        /* A single item does not need a count badge */
+        .media-container[data-count="1"]::after {
+            content: none;
+        }
+
         /* SIMPLIFIED Media modal */
         .media-modal {
             display: none;

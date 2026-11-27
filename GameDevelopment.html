@@ -1424,12 +1424,13 @@
             </div>
 
             <div class="game-card" onclick="openModal('specialKids')">
-                <img src="assetsApps/SpecialKids/Banner.jpg" alt="SpecialKids" class="game-image">
+                <img src="assetsApps/SpecialKids/Banner.png" alt="SpecialKids" class="game-image">
                 <h3>SpecialKids</h3>
-                <p>SpecialKids is a calm place for young children to practise matching, sorting, tracing, feelings and daily routines. Made with autistic children in mind, its wordless games use soft sounds and pictures, with no ads and no tracking.</p>
+                <p>SpecialKids is a calm place for young children to practise matching, sorting, tracing, feelings and daily routines. Made with autistic children in mind, its 7 wordless games have 12 themes each, plus picture stories, Free Play and breathing, with no ads, no tracking and no permissions.</p>
                 <div class="tech-stack">
                     <span class="tech-tag">SwiftUI</span>
                     <span class="tech-tag">AVFoundation</span>
+                    <span class="tech-tag">StoreKit 2</span>
                 </div>
             </div>
 
@@ -1630,42 +1631,39 @@
         <div class="modal-content">
             <span class="close" onclick="closeModal('specialKids')">&times;</span>
             <h2>SpecialKids</h2>
-            <img src="assetsApps/SpecialKids/Banner.jpg" alt="SpecialKids banner" class="modal-image" onclick="openLightbox('assetsApps/SpecialKids/Banner.jpg')">
+            <img src="assetsApps/SpecialKids/Banner.png" alt="SpecialKids banner" class="modal-image" onclick="openLightbox('assetsApps/SpecialKids/Banner.png')">
             <h2>My role as iOS developer</h2>
             <p>Led the design and development of SpecialKids (formerly ASD Eduplay), an educational app focused on providing an accessible, calming, and engaging experience for young children, including autistic children. Built adaptive learning games using SwiftUI and AVFoundation, featuring customizable sensory settings tailored to individual needs. Integrated a positive reinforcement system to encourage focus and motivation. Worked closely with autism specialists to ensure every interaction was thoughtfully crafted to support the cognitive and emotional needs of children with ASD.</p>
             <div class="media-section">
                 <h3>📸 Screenshots</h3>
                 <div class="media-grid">
                     <div class="media-item" onclick="openMediaModal(this)">
-                        <img src="assetsApps/SpecialKids/Screenshots/01.jpg" alt="SpecialKids screenshot 1" class="media-image">
+                        <img src="assetsApps/SpecialKids/Screenshots/01-themes.jpg" alt="SpecialKids Matching themes, free and premium" class="media-image">
                     </div>
                     <div class="media-item" onclick="openMediaModal(this)">
-                        <img src="assetsApps/SpecialKids/Screenshots/04.jpg" alt="SpecialKids screenshot 2" class="media-image">
+                        <img src="assetsApps/SpecialKids/Screenshots/02-matching.jpg" alt="SpecialKids matching round" class="media-image">
                     </div>
                     <div class="media-item" onclick="openMediaModal(this)">
-                        <img src="assetsApps/SpecialKids/Screenshots/05.jpg" alt="SpecialKids screenshot 3" class="media-image">
+                        <img src="assetsApps/SpecialKids/Screenshots/03-feelings.jpg" alt="SpecialKids Feelings game" class="media-image">
+                    </div>
+                    <div class="media-item" onclick="openMediaModal(this)">
+                        <img src="assetsApps/SpecialKids/Screenshots/04-stories.jpg" alt="SpecialKids picture stories" class="media-image">
+                    </div>
+                    <div class="media-item" onclick="openMediaModal(this)">
+                        <img src="assetsApps/SpecialKids/Screenshots/05-free-play.jpg" alt="SpecialKids Free Play" class="media-image">
+                    </div>
+                    <div class="media-item" onclick="openMediaModal(this)">
+                        <img src="assetsApps/SpecialKids/Screenshots/08-weather.jpg" alt="SpecialKids weather theme round" class="media-image">
                     </div>
                 </div>
             </div>
 
             <div class="video-section">
-                <h3>🎥 Videos</h3>
+                <h3>🎥 Video</h3>
                 <div class="videos-grid">
-                    <div class="video-container" onclick="playVideo('assetsGame/gameplayASD1.mp4', 'Gameplay Overview')">
+                    <div class="video-container" onclick="playVideo('assetsApps/SpecialKids/Videos/App-walkthrough.mp4', 'Inside SpecialKids')">
                         <video class="video-thumbnail" preload="metadata">
-                            <source src="assetsGame/gameplayASD1.mp4" type="video/mp4">
-                        </video>
-                        <div class="play-button">▶️</div>
-                    </div>
-                    <div class="video-container" onclick="playVideo('assetsGame/gameplayASD2.mp4', 'Learning Features')">
-                        <video class="video-thumbnail" preload="metadata">
-                            <source src="assetsGame/gameplayASD2.mp4" type="video/mp4">
-                        </video>
-                        <div class="play-button">▶️</div>
-                    </div>
-                    <div class="video-container" onclick="playVideo('assetsGame/gameplayasd3.mp4', 'Interactive Games')">
-                        <video class="video-thumbnail" preload="metadata">
-                            <source src="assetsGame/gameplayasd3.mp4" type="video/mp4">
+                            <source src="assetsApps/SpecialKids/Videos/App-walkthrough.mp4" type="video/mp4">
                         </video>
                         <div class="play-button">▶️</div>
                     </div>
